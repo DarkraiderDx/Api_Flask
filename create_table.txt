@@ -1,0 +1,13 @@
+create table articulos (
+    id int primary key,
+    nombre varchar(50),
+    descripcion varchar(255),
+    cantidad int,
+    precio decimal
+);
+create table ventas(
+    id_fac int primary key,
+    pago decimal,
+    id int,
+    foreign key(id) references articulos(id)
+);
